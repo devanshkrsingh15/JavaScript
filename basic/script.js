@@ -1,5 +1,17 @@
 import Student from "./Student.js";
 
+
+function printStar(n) {
+  for (let i = 0; i < n; i++) {
+    var s = "";
+    for (let j = 0; j < i; j++) {
+      s = s + "*";
+    }
+    console.log(s);
+  }
+}
+
+
 const my = new Student(
   "Devansh",
   "15 Dec 1999",
@@ -25,16 +37,17 @@ const markup = (Student) => {
   `;
 };
 
-console.log(my.getAge())
+console.log(my.getAge());
 my.increasePocketMoney(100000);
 const main = document.createElement("main");
 main.innerHTML = markup(my);
 document.body.appendChild(main);
 
-
-const arr = [1,"one",true];
-arr.push([1,2,3,4])
-arr[10] = 70
-arr.sort()
+const arr = [1, "one", true];
+arr.push([1, 2, 3, 4]);
+arr[10] = 70;
+arr.sort();
 console.log(arr);
 console.log(arr.length);
+
+printStar(5);
